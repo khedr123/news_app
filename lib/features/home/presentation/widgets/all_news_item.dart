@@ -60,7 +60,7 @@ class AllNewsItemWidget extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                Row(
+                Wrap(
                   children: [
                     Text(
                       article.author,

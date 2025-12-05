@@ -14,28 +14,40 @@ class AllNews extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
 
-      body: BlocBuilder<HomeCubit,HomeStates>(
-          buildWhen: (previous, current) =>
-          current is GetAllNewsFaluire ||
-              current is GetAllNewsLoading ||
-              current is GetAllNewsSuccess,
-          builder: (context, state) {
-            if (state is GetAllNewsLoading) {
-              return Center(child: CircularProgressIndicator());
-            } else if (state is GetAllNewsFaluire) {
-              return Center(child: Text('Error'),);
-            } else if (state is GetAllNewsSuccess) {
-              final List<ArticleModel> articles = state.articles;
+      body: BlocBuilder<HomeCubit, HomeStates>(
+        buildWhen: (previous, current) =>
+            current is GetAllNewsFaluire ||
+            current is GetAllNewsLoading ||
+            current is GetAllNewsSuccess,
+        builder: (context, state) {
+          if (state is GetAllNewsLoading) {
+            return Center(child: CircularProgressIndicator());
+          } else if (state is GetAllNewsFaluire) {
+            return Center(child: Text('Error'));
+          } else if (state is GetAllNewsSuccess) {
+            final List<ArticleModel> articles = state.articles;
 
-              return ListView.builder(itemCount: 5,
-                itemBuilder: (context, index) {
-                  return AllNewsItemWidget(article: articles[index],);
-                },
-              );
-            } else {
-              return SizedBox.shrink();
-            }
+            return articles.isEmpty
+                ? Center(
+                    child: Text(
+                      'No News Found',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                : ListView.builder(
+                    itemCount: articles.length,
+                    itemBuilder: (context, index) {
+                      return AllNewsItemWidget(article: articles[index]);
+                    },
+                  );
+          } else {
+            return SizedBox.shrink();
           }
+        },
       ),
     );
   }
