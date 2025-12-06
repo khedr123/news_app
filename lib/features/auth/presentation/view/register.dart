@@ -42,7 +42,7 @@ class RegisterView extends StatelessWidget {
                 title: 'First Name',
                 suffixIcon: IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.email),
+                  icon: Icon(Icons.person),
                 ),
               ),
               SizedBox(height: 20),
@@ -51,7 +51,7 @@ class RegisterView extends StatelessWidget {
                 title: 'Last Name',
                 suffixIcon: IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.email),
+                  icon: Icon(Icons.person),
                 ),
               ),
               SizedBox(height: 20),
@@ -86,7 +86,7 @@ class RegisterView extends StatelessWidget {
                   ),
                   onPressed: () {},
                   child: Text(
-                    'Sign in',
+                    'Register',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -95,28 +95,18 @@ class RegisterView extends StatelessWidget {
                   ),
                 ),
               ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Forgot Password',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
+
               SizedBox(height: 15),
               Row(
                 children: [
                   Text(
-                    'Dont have an account?',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    'Already have an account?',
+                    style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                   ),
                   TextButton(
                     onPressed: () {},
                     child: Text(
-                      'Register Now',
+                      'Login Now',
                       style: TextStyle(color: Colors.black),
                     ),
                   ),
