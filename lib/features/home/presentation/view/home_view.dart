@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utilises/colors.dart';
+import '../../../../core/shared_widgets/appbar.dart';
+import '../../../../core/utilises/colors/colors.dart';
 import '../widgets/all_news.dart';
 import '../widgets/home_top_section.dart';
 import '../widgets/trending_section.dart';
@@ -11,17 +12,17 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: CustomAppBar(
+        title: 'News',
         actions: [
           IconButton(
-            color: AppColors.appTextColor,
             onPressed: () {},
             icon: Icon(Icons.sunny),
+            color: AppColors.appTextColor,
           ),
         ],
-        backgroundColor: AppColors.appBarColor,
-        title: Text('News', style: TextStyle(color: AppColors.appTextColor)),
       ),
+
       backgroundColor: AppColors.backgroundColor,
       body: Column(
         children: [

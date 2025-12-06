@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/core/utilises/colors.dart';
+import 'package:news_app/core/utilises/colors/colors.dart';
 import 'package:news_app/features/home/presentation/cubit/home_cubit.dart';
 
 class HomeTopSection extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../core/utilises/colors.dart';
+import '../../../../core/utilises/colors/colors.dart';
 import '../../data/models/article_model.dart';
 import '../cubit/home_cubit.dart';
 import '../cubit/home_states.dart';

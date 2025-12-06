@@ -6,7 +6,7 @@ import 'package:news_app/features/home/presentation/cubit/home_cubit.dart';
 import 'package:news_app/features/home/presentation/cubit/home_states.dart';
 import 'package:news_app/features/home/presentation/widgets/trending_news_item.dart';
 
-import '../../../../core/utilises/colors.dart';
+import '../../../../core/utilises/colors/colors.dart';
 
 class TrendingSection extends StatelessWidget {
   const TrendingSection({super.key});

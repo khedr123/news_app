@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/features/home/presentation/cubit/home_cubit.dart';
 
+import 'features/auth/presentation/view/login.dart';
+import 'features/auth/presentation/view/register.dart';
 import 'features/home/presentation/view/home_view.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: BlocProvider(
         create: (context) => HomeCubit()..getTrendingNews()..getAllNews(),
-        child: HomeView(),
+        child: RegisterView(),
       ),
     );
   }
