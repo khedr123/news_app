@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/core/shared_widgets/app_button.dart';
 import 'package:news_app/core/shared_widgets/appbar.dart';
 
 import '../../../../core/shared_widgets/custom_input_widget.dart';
@@ -77,23 +78,7 @@ class RegisterView extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 height: 60,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    backgroundColor: Colors.green,
-                  ),
-                  onPressed: () {},
-                  child: Text(
-                    'Register',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
+                child: AppButton(title: 'Register',onPressed: (){},)
               ),
 
               SizedBox(height: 15),

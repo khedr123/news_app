@@ -158,6 +158,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "pinput",
+      "rootUri": "file:///Users/basharkhedr/.pub-cache/hosted/pub.dev/pinput-6.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "provider",
       "rootUri": "file:///Users/basharkhedr/.pub-cache/hosted/pub.dev/provider-6.1.5+1",
       "packageUri": "lib/",

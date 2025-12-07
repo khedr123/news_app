@@ -184,6 +184,13 @@
             </list>
           </value>
         </entry>
+        <entry key="pinput">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/pinput-6.0.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="provider">
           <value>
             <list>
@@ -295,6 +302,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mime-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/nested-1.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/path-1.9.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/pinput-6.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/provider-6.1.5+1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/source_span-1.10.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/stack_trace-1.12.1/lib" />

@@ -11,7 +11,8 @@
         "dio",
         "flutter",
         "flutter_bloc",
-        "loading_animation_widget"
+        "loading_animation_widget",
+        "pinput"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -41,6 +42,13 @@
         "stream_channel",
         "test_api",
         "vector_math"
+      ]
+    },
+    {
+      "name": "pinput",
+      "version": "6.0.1",
+      "dependencies": [
+        "flutter"
       ]
     },
     {
