@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/core/shared_widgets/app_button.dart';
 import 'package:news_app/core/shared_widgets/appbar.dart';
@@ -8,10 +11,24 @@ import '../../../../core/utilises/colors/colors.dart';
 class RegisterView extends StatelessWidget {
   RegisterView({super.key});
 
+  final Dio dio = Dio();
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  Future<void> signup() async {
+    final Response response = await dio.post(
+      'https://accessories-eshop.runasp.net/api/auth/register',
+      data: {
+        "email": emailController.text,
+        "password": passwordController.text,
+        "firstName": firstNameController.text,
+        "lastName": lastNameController.text,
+      },
+    );
+    log(response.data);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +95,12 @@ class RegisterView extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 height: 60,
-                child: AppButton(title: 'Register',onPressed: (){},)
+                child: AppButton(
+                  title: 'Register',
+                  onPressed: () {
+                    signup();
+                  },
+                ),
               ),
 
               SizedBox(height: 15),

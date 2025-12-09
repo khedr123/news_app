@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: BlocProvider(
         create: (context) => HomeCubit()..getTrendingNews()..getAllNews(),
-        child: VerificationView(),
+        child: LoginView(),
       ),
     );
   }
