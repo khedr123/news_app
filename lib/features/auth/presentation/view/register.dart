@@ -61,7 +61,7 @@ class RegisterView extends StatelessWidget {
                 suffixIcon: IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.person),
-                ),
+                ), obscureText: false,
               ),
               SizedBox(height: 20),
               CustomInputWidget(
@@ -70,7 +70,7 @@ class RegisterView extends StatelessWidget {
                 suffixIcon: IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.person),
-                ),
+                ), obscureText: false,
               ),
               SizedBox(height: 20),
               CustomInputWidget(
@@ -79,7 +79,7 @@ class RegisterView extends StatelessWidget {
                 suffixIcon: IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.email),
-                ),
+                ), obscureText: false,
               ),
               SizedBox(height: 20),
 
@@ -89,7 +89,7 @@ class RegisterView extends StatelessWidget {
                 suffixIcon: IconButton(
                   onPressed: () {},
                   icon: Icon(Icons.visibility_off),
-                ),
+                ), obscureText: true,
               ),
               SizedBox(height: 10),
               SizedBox(

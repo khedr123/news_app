@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/features/auth/presentation/cubit/login_cubit/login_cubit.dart';
 import 'package:news_app/features/auth/presentation/view/verification.dart';
 import 'package:news_app/features/home/presentation/cubit/home_cubit.dart';
 
@@ -19,10 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BlocProvider(
-        create: (context) => HomeCubit()..getTrendingNews()..getAllNews(),
-        child: LoginView(),
-      ),
+      home: BlocProvider(create: ( context) =>AuthCubit(),
+      child: LoginView()),
     );
   }
 }
