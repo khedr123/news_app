@@ -11,6 +11,7 @@ import '../../../../core/shared_widgets/app_button.dart';
 import '../../../../core/shared_widgets/custom_input_widget.dart';
 import '../../../../core/utilises/colors/colors.dart';
 import '../../../../core/utilises/helper_methods/validator.dart';
+import '../../../home/presentation/cubit/home_cubit.dart';
 import '../cubit/login_cubit/login_cubit.dart';
 
 class LoginView extends StatelessWidget {
@@ -99,7 +100,14 @@ class LoginView extends StatelessWidget {
                       } else if (state is LoginSuccess) {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeView()),
+                          MaterialPageRoute(
+                            builder: (context) => BlocProvider(
+                              create: (context) => HomeCubit()
+                                ..getTrendingNews()
+                                ..getAllNews(),
+                              child: HomeView(),
+                            ),
+                          ),
                         );
                       }
                     },
@@ -118,14 +126,7 @@ class LoginView extends StatelessWidget {
                                     email: emailController.text,
                                     password: passwordController.text,
                                   )
-                                  .then((_) {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => HomeView(),
-                                      ),
-                                    );
-                                  })
+
                                   .catchError((error) {
                                     log('Login Failed: $error');
                                   });
